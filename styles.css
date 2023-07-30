@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 10px solid red; /* Add the red-colored border with 5px width */
+  box-sizing: border-box;
+  margin: 0;
+  height: 100vh;
+}
+
+.progress-container {
+  width: 80%;
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #f1f1f1;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 30px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  color: white;
+  padding-top: 100px;
+}
+
+.popup h2 {
+  font-size: 24px;
+}
+
+.popup p {
+  font-size: 18px;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.imagebg {
+  display: none;
+}
+
+.imagebg img {
+  width: 100%;
+  height: 96vh;
+}
+
+.alert {
+  width: 10%;
+}
+
+.siren {
+  width: 10%;
+}
+
+@media (max-width: 767px) {
+  .alert {
+    width: 30%;
+  }
+
+  .siren {
+    width: 30%;
+  }
+}
+
+body::before {
+  content: "Virus ";
+  position: absolute;
+  z-index: -1;
+  font-size: 14px; /* Adjust the font size for the sprinkled text */
+  opacity: 0.2; /* Adjust the opacity to control visibility */
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
